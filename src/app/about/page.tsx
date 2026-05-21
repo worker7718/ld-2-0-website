@@ -34,7 +34,7 @@ export default function AboutPage() {
         <section className="border-b border-[var(--line)] bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <SectionHeader
-              eyebrow="Bureau Biography"
+              eyebrow="Biography"
               title="A credible voice for resilience, identity, faith, leadership, and community change."
               body={speakerSubmissionProfile.role}
             />
@@ -53,7 +53,9 @@ export default function AboutPage() {
             <div className="mt-10 grid gap-4 md:grid-cols-5">
               {timeline.map((item) => (
                 <article key={item} className="border border-[var(--line)] bg-white p-5">
-                  <p className="font-serif text-2xl text-[var(--ink)]">{item}</p>
+                  <p className="mx-auto max-w-full break-words text-center font-serif text-2xl leading-tight text-balance text-[var(--ink)] md:text-[1.35rem] xl:text-2xl">
+                    {item}
+                  </p>
                   <p className="mt-3 text-sm leading-7 text-[#675d50]">
                     A chapter in Lornette&apos;s progression from sport and coaching to transformational public speaking.
                   </p>

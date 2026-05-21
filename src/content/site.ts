@@ -142,7 +142,6 @@ export const siteCopy = {
     "Diversity Award Winner",
   ],
   socialLinks: [
-    { label: "Instagram", href: "https://www.instagram.com/lornettedaye" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/lornette-d-419276358" },
     { label: "Email", href: "mailto:ldayespeaking@gmail.com" },
   ],
@@ -204,6 +203,11 @@ export const images = {
     alt: "Lornette Daye speaker brand artwork cropped to the portrait area.",
     crop: "object-[76%_44%] scale-[1.78]",
   },
+  speakingChampionMindset: {
+    src: "/generated/speaking-champion-abstract-gold-flow.png",
+    alt: "Abstract elegant gold and white flowing artwork for the Champion Mindset speaking pillar.",
+    crop: "object-[72%_50%]",
+  },
   podcastCard: {
     src: podcastCard,
     alt: "Podcast appearance artwork featuring Lornette Daye.",
@@ -215,7 +219,7 @@ export const images = {
     crop: "object-[50%_52%] scale-[1.02]",
   },
   recognitionCommunityAwards: {
-    src: "/generated/recognition-awards-community-gold.png",
+    src: "/generated/recognition-awards-community-gold-centered.png",
     alt: "Minimalist gold-themed artwork representing awards and community outreach.",
     crop: "object-center",
   },
@@ -516,22 +520,32 @@ export const servicePages: Record<string, ServicePage> = {
 
 export const testimonials = [
   {
+    category: "Coaching & Transformation",
     quote:
-      "I have witnessed countless business motivational speakers over my career of 15 years. Lornette you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message and generate positive change.",
+      "As a Life coach and Transformational Speaker, she indeed changes lives by drawing on vast life experiences and actionable insights.",
+    name: "Ayo",
+    context: "Professional",
+  },
+  {
+    category: "Keynote Speaking",
+    quote:
+      "Lornette, you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message.",
     name: "Harriet Tinka",
-    context: "Audience testimonial supplied in brand materials",
+    context: "Founder/CEO, bestselling author, turning point expert, Empowered Me Inc",
   },
   {
+    category: "Faith & Wellness",
     quote:
-      "When I heard Lornette speak about her life and trials and accomplishments, it hit me in the heart and gave me the courage to believe that some issues I was going through in my own life would be ok.",
-    name: "A.R.",
-    context: "Audience testimonial supplied in brand materials",
+      "Lornette encouraged me to increase the intensity and speed slowly, and now I have been consistent with very brisk walking daily.",
+    name: "Carol",
+    context: "Audience testimonial",
   },
   {
+    category: "Youth Coaching",
     quote:
-      "An exceptional track coach - truly dedicated, and cares deeply for her athletes' futures. Lornette coached my daughter through middle and high school track, teaching her focus, dedication, and self-belief.",
+      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply for her athletes futures.",
     name: "Shawna Randolph",
-    context: "Parent - Sprint Coach Client",
+    context: "Youth coaching testimonial",
   },
 ];
 

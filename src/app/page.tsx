@@ -316,9 +316,8 @@ export default function Home() {
             <SectionHeader
               eyebrow="Impact"
               title="What people are saying."
-              body="Testimonials are drawn from provided brand materials and kept separate from media proof claims."
             />
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => (
                 <TestimonialCard key={testimonial.name} {...testimonial} />
               ))}
@@ -356,14 +355,29 @@ export default function Home() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Speak Life Blog"
-                title="Insights for resilience, leadership, and performance."
+                title="Short reflections for courage, faith, and purpose."
               />
-              <CTAButton href="/blog" variant="secondary">All Articles</CTAButton>
+              <CTAButton href="/blog" variant="secondary">Explore the Speak Life Blog</CTAButton>
             </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
+            <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="grid gap-6">
+                {posts[0] ? (
+                  <BlogCard post={posts[0]} variant="featured" headingLevel="h3" />
+                ) : null}
+                {posts[3] ? (
+                  <BlogCard post={posts[3]} variant="compact" headingLevel="h3" />
+                ) : null}
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+                {posts.slice(1, 3).map((post) => (
+                  <BlogCard
+                    key={post.slug}
+                    post={post}
+                    variant="compact"
+                    headingLevel="h3"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>

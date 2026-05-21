@@ -456,6 +456,8 @@ export default function SpeakingPage() {
             <div className="mt-12 grid gap-7">
               {speakingPillars.map((pillar, index) => {
                 const Icon = pillar.icon;
+                const pillarImage = images.speakingChampionMindset;
+
                 return (
                   <article
                     key={pillar.title}
@@ -463,20 +465,22 @@ export default function SpeakingPage() {
                   >
                     <div className={`grid gap-0 lg:grid-cols-[0.9fr_1.2fr_0.8fr] ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2 lg:[&>*:nth-child(2)]:order-1" : ""}`}>
                       <div className="relative min-h-[290px] overflow-hidden bg-[var(--ink)] p-7 text-[var(--ivory)]">
-                        <div className="absolute inset-0 opacity-55">
+                        <div className="absolute inset-0 opacity-[0.82]">
                           <Image
-                            src={images.brandStatement.src}
-                            alt={images.brandStatement.alt}
+                            src={pillarImage.src}
+                            alt={pillarImage.alt}
                             fill
                             unoptimized
                             sizes="(max-width: 1024px) 92vw, 32vw"
-                            className={`object-cover ${images.brandStatement.crop ?? "object-center"}`}
+                            className={`object-cover ${pillarImage.crop ?? "object-center"}`}
                           />
                           <span className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/15" />
                         </div>
                         <div className="relative flex h-full min-h-[236px] flex-col justify-between">
                           <div className="flex items-center justify-between gap-4">
-                            <span className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--champagne)]">
+                            <span
+                              className="inline-flex rounded-[4px] bg-[#c5aa68] px-2 py-1 text-xs font-bold uppercase leading-none tracking-[0.26em] text-[var(--ink)] shadow-[0_8px_22px_rgba(23,20,18,0.16)]"
+                            >
                               Pillar {pillar.number}
                             </span>
                             <Icon size={30} aria-hidden="true" className="text-[var(--champagne)]" />

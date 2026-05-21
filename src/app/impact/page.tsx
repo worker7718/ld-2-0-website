@@ -29,7 +29,7 @@ export default function ImpactPage() {
         </section>
         <section className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {testimonials.map((testimonial) => (
                 <TestimonialCard key={testimonial.name} {...testimonial} />
               ))}
