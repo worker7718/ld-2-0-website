@@ -1,9 +1,10 @@
 import { CTAButton } from "@/components/CTAButton";
-import { ImageFrame } from "@/components/ImageFrame";
+import { AboutGallery } from "@/components/AboutGallery";
 import { MetricStrip } from "@/components/MetricStrip";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
-import { additionalImages, createMetadata, siteCopy, speakerSubmissionProfile } from "@/content/site";
+import { aboutGallerySlides } from "@/content/aboutGallery";
+import { createMetadata, siteCopy, speakerSubmissionProfile } from "@/content/site";
 
 export const metadata = createMetadata(
   "About Lornette",
@@ -62,8 +63,8 @@ export default function AboutPage() {
                 </article>
               ))}
             </div>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              <ImageFrame image={additionalImages.aboutTimeline} ratio="aspect-[4/5]" />
+            <AboutGallery slides={aboutGallerySlides} />
+            <div className="mt-12">
               <div className="border border-[var(--line)] bg-white p-8">
                 <SectionHeader eyebrow="Mission" title="Unlock potential. Strengthen communities. Develop leaders." body={siteCopy.mission} />
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
