@@ -267,7 +267,7 @@ export default function SpeakingPage() {
               <div className="mt-9 grid gap-3 border-y border-[rgba(198,165,92,0.34)] py-5 sm:grid-cols-2 lg:grid-cols-4">
                 {heroStats.map((stat) => (
                   <div key={stat} className="flex items-center gap-2 text-sm font-bold text-[var(--charcoal)]">
-                    <BadgeCheck size={17} aria-hidden="true" className="text-[var(--gold-dark)]" />
+                    <BadgeCheck size={17} aria-hidden="true" className="shrink-0 text-[var(--gold-dark)]" />
                     {stat}
                   </div>
                 ))}
@@ -337,7 +337,7 @@ export default function SpeakingPage() {
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
-              <div className="border border-[rgba(198,165,92,0.38)] bg-[var(--ivory)] p-5">
+              <div className="self-start border border-[rgba(198,165,92,0.38)] bg-[var(--ivory)] p-5">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
                   Recent Speaking
                 </p>
