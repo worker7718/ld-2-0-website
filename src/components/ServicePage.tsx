@@ -5,6 +5,8 @@ import { SectionHeader } from "./SectionHeader";
 import { SpeakerMediaBand } from "./SpeakerMediaBand";
 
 export function ServicePage({ page }: { page: ServicePageData }) {
+  const mediaBandProps = page.mediaBand ?? {};
+
   return (
     <main>
       <HeroSplit
@@ -73,6 +75,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
       <SpeakerMediaBand
         title={`Review Lornette's media before booking ${page.navLabel.toLowerCase()}.`}
         body="Event planners, school leaders, teams, and community organizers can move from the reel to the speaker kit to the booking form without hunting across the site."
+        {...mediaBandProps}
       />
     </main>
   );

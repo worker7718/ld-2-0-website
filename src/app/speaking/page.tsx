@@ -361,7 +361,7 @@ export default function SpeakingPage() {
                   Engagements
                 </p>
                 <ul className="mt-4 grid gap-2 text-sm leading-6 text-[var(--charcoal)]">
-                  {profile.selectedSpeakingEngagements.slice(0, 4).map((item) => (
+                  {profile.selectedSpeakingEngagements.map((item) => (
                     <li key={item} className="flex gap-2">
                       <CheckCircle2 size={15} aria-hidden="true" className="mt-1 shrink-0 text-[var(--gold-dark)]" />
                       {item}

@@ -54,6 +54,28 @@ export type NavItem = {
   href: string;
 };
 
+export type MediaBandIcon = "film" | "mic" | "download" | "calendar" | "users" | "target";
+
+export type MediaBandCard = {
+  icon: MediaBandIcon;
+  title: string;
+  body: string;
+};
+
+export type MediaBandContent = {
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  videoTitle?: string;
+  videoSummary?: string;
+  cards?: MediaBandCard[];
+  footerLabel?: string;
+};
+
 export type ServicePage = {
   slug: string;
   navLabel: string;
@@ -68,6 +90,7 @@ export type ServicePage = {
     items: string[];
   }[];
   cta: string;
+  mediaBand?: MediaBandContent;
 };
 
 export type Post = {
@@ -385,6 +408,34 @@ export const servicePages: Record<string, ServicePage> = {
       },
     ],
     cta: "Schedule a Leadership Consultation",
+    mediaBand: {
+      eyebrow: "Leadership Preview",
+      title: "See Lornette's leadership message before you book.",
+      body: "Watch her speaking style, review planning materials, and decide whether her practical approach to resilience, communication, and confident leadership is the right fit for your team.",
+      primaryLabel: "Watch Speaker Reel",
+      secondaryLabel: "View Speaker Kit",
+      videoTitle: "Leadership Speaking Preview",
+      videoSummary:
+        "A quick look at Lornette's presence, storytelling, and ability to connect practical leadership lessons to real-life pressure.",
+      cards: [
+        {
+          icon: "film",
+          title: "Watch Her Speak",
+          body: "Get a quick feel for Lornette's tone, presence, and ability to connect leadership lessons to real life.",
+        },
+        {
+          icon: "target",
+          title: "Review The Fit",
+          body: "See how her message connects to resilience, communication, accountability, and leading under pressure.",
+        },
+        {
+          icon: "calendar",
+          title: "Plan The Session",
+          body: "Use the speaker kit to shape the right leadership experience around your audience, goals, format, and date.",
+        },
+      ],
+      footerLabel: "Ready to review fit and next steps",
+    },
   },
   inclusion: {
     slug: "/inclusion",
@@ -671,6 +722,7 @@ export const speakerSubmissionProfile = {
     "St. Albert Rotary Club",
     "Speak Feed Lead Project",
     "Millionaire Woman Podcast",
+    "Spruce Grove Rotary Club",
   ],
   recognitionHighlights: [
     "Diversity Award Winner",
